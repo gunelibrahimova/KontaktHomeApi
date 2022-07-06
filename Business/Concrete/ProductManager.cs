@@ -31,6 +31,7 @@ namespace Business.Concrete
                 Price = productDTO.Price,
                 CoverPhoto = productDTO.CoverPhoto,
                 SKU = productDTO.SKU,
+                //CategoryId = productDTO.CategoryId
 
             };
 

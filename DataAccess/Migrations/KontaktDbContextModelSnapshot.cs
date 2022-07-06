@@ -34,6 +34,16 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path3")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
@@ -179,6 +189,23 @@ namespace DataAccess.Migrations
                     b.HasIndex("ParentCategoryId");
 
                     b.ToTable("SecondParentCategories");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.SliderPhoto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("PhotoURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SliderPhotos");
                 });
 
             modelBuilder.Entity("Entities.Concrete.User", b =>
