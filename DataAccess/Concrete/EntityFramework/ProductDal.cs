@@ -70,6 +70,14 @@ namespace DataAccess.Concrete.EntityFramework
                     IsSlider = product.IsSlider,
                     SKU = product.SKU,
                     IsStock = product.IsStock,
+                    Marka = product.Marka,
+                    Model = product.Model,
+                    Ceki = product.Ceki,
+                    Ekran = product.Ekran,
+                    Kamera = product.Kamera,
+                    RAM = product.RAM,
+                    ROM = product.ROM,
+                    Processor = product.Processor,
 
                     Rating = Math.Round(ratingSum, 1),
                     Comments = commentResult,
@@ -130,6 +138,14 @@ namespace DataAccess.Concrete.EntityFramework
                         Rating = Math.Round(ratingSum, 1),
                         SKU = products[i].SKU,
                         IsStock = products[i].IsStock,
+                        Marka = products[i].Marka,
+                        Model = products[i].Model,
+                        Ceki = products[i].Ceki,
+                        Ekran = products[i].Ekran,
+                        Kamera = products[i].Kamera,
+                        RAM = products[i].RAM,
+                        ROM = products[i].ROM,
+                        Processor = products[i].Processor,
                     };
                     result.Add(productList);
                 }

@@ -13,7 +13,6 @@ namespace Business.Abstract
         void Remove(Category category);
         void Update(Category category);
         List<Category> GetAllCategories();
-        //void AddGetAllIconPath(Category category);
         Category GetCategoryById(int id);
 
     }
